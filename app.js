@@ -3,10 +3,10 @@ const https = require('https');
 const bodyParser = require('body-parser');
 const port = 3000;
 const app = express();
-const url = "https://us7.api.mailchimp.com/3.0/lists/2f5ceb30e2"; // ending number in the url represents the list we would like to POST to..
+const url = "https://usX.api.mailchimp.com/3.0/lists/{listId}"; // ending number in the url represents the list we would like to POST to..
 const options = {
   method: 'POST',
-  auth: "tomerguttman:c85af07e0661e512b45b37b9e85db78c-us7"
+  auth: "tomerguttman:{YOUR API KEY}" // change X in the url to the ending digit of your API key
 };
 
 app.use(express.static('public'));
